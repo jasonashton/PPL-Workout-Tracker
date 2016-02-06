@@ -3,20 +3,22 @@
 <table class="records-table">
   <thead>
     <tr>
-      <th>Day</th>
-      <th>Bench</th>
-      <th>Overhead</th>
-      <th>Incline</th>
-      <th>Lateral</th>
-      <th>Pushdown</th>
-      <th>Tricep</th>
-      <th>Shrugs </th>
+      <th>Date</th>
+      <th>Day<br></th>
+      <th>Bench<br>3x5</th>
+      <th>Overhead<br>3x5</th>
+      <th>Incline<br>3x5</th>
+      <th>Lateral<br>3x10-12</th>
+      <th>Pushdown<br>3x10-12</th>
+      <th>Tricep<br>3x10-12</th>
+      <th>Shrugs<br>3x10-12</th>
     </tr>
   </thead>
 
   <tbody>
     <% @gains.where(name: name, day: "Push").each do |gain| %>
       <tr>
+        <td><%= gain.created_at.strftime("%d %b. %Y") %></td>
         <td><%= gain.day %></td>
         <td><%= gain.bench %></td>
         <td><%= gain.overhead %></td>
@@ -37,19 +39,21 @@
 <table class="records-table">
   <thead>
     <tr>
-      <th>Pull</th>
-      <th>Rows</th>
-      <th>Lat Pulldown</th>
-      <th>More Rows</th>
-      <th>Face-Pulls</th>
-      <th>Barbell Curls</th>
-      <th>Other Curls</th>
+      <th>Date</th>
+      <th>Day<br></th>
+      <th>Rows<br>3x5</th>
+      <th>Lat Pulldown<br>3x8-10</th>
+      <th>More Rows<br>3x8-10</th>
+      <th>Face-Pulls<br>3x10-12</th>
+      <th>Barbell Curls<br>4x10-12</th>
+      <th>Other Curls<br>3x10-12</th>
     </tr>
   </thead>
 
   <tbody>
     <% @gains.where(name: name, day: "Pull").each do |gain| %>
       <tr>
+        <td><%= gain.created_at.strftime("%d %b. %Y") %></td>
         <td><%= gain.day %></td>
         <td><%= gain.row %></td>
         <td><%= gain.pulldown %></td>
@@ -69,18 +73,20 @@
 <table class="records-table">
   <thead>
     <tr>
-      <th>Day</th>
-      <th>OG Squats</th>
-      <th>Leg Press</th>
-      <th>Quads</th>
-      <th>Hammies</th>
-      <th>Baby Calfs</th>
+      <th>Date</th>
+      <th>Day<br></th>
+      <th>OG Squats<br>4x5-6</th>
+      <th>Leg Press<br>3x8-10</th>
+      <th>Quads<br>3x10-12</th>
+      <th>Hammies<br>3x10-12</th>
+      <th>Baby Calfs<br>5x10-12</th>
     </tr>
   </thead>
 
   <tbody>
     <% @gains.where(name: name, day: "Legs").each do |gain| %>
       <tr>
+        <td><%= gain.created_at.strftime("%d %b. %Y") %></td>
         <td><%= gain.day %></td>
         <td><%= gain.squats %></td>
         <td><%= gain.legpress %></td>
