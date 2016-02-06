@@ -1,0 +1,38 @@
+<h2><%= name %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Day</th>
+      <th>Bench</th>
+      <th>Overhead</th>
+      <th>Incline</th>
+      <th>Lateral</th>
+      <th>Pushdown</th>
+      <th>Tricep</th>
+      <th>Shrugs </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gains.where(name: name).each do |gain| %>
+      <tr>
+        <td><%= gain.name %></td>
+        <td><%= gain.day %></td>
+        <td><%= gain.bench %></td>
+        <td><%= gain.overhead %></td>
+        <td><%= gain.incline %></td>
+        <td><%= gain.lateral %></td>
+        <td><%= gain.pushdown %></td>
+        <td><%= gain.tricep %></td>
+        <td><%= gain.shrugs %></td>
+        <td><%= link_to 'Show', gain %></td>
+        <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
+        <td><%= link_to 'Destroy', gain, method: :delete,
+                                  data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <%= link_to 'New Gain', new_gain_path %>
