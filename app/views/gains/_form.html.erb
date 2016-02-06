@@ -15,6 +15,8 @@
     <li><%= f.select :name, ['Jason', 'David', 'Jacob']%></li>
     <li><%= f.label :day %></li>
     <li><%= f.select :day, ['Push', 'Pull', 'Legs'] %></li>
+  </ul>
+  <ul id="push-form">
     <li><%= f.label :bench %></li>
     <li><%= f.text_field :bench %></li>
     <li><%= f.label :overhead %></li>
@@ -30,7 +32,32 @@
     <li><%= f.label :shrugs %></li>
     <li><%= f.text_field :shrugs %></li>
   </ul>
-
+  <ul id="pull-form">
+    <li><%= f.label :row %></li>
+    <li><%= f.text_field :row %></li>
+    <li><%= f.label :pulldown %></li>
+    <li><%= f.text_field :pulldown %></li>
+    <li><%= f.label :seatedrows %></li>
+    <li><%= f.text_field :seatedrows %></li>
+    <li><%= f.label :facepull %></li>
+    <li><%= f.text_field :facepull %></li>
+    <li><%= f.label :curls %></li>
+    <li><%= f.text_field :curls %></li>
+    <li><%= f.label :hammercurls %></li>
+    <li><%= f.text_field :hammercurls %></li>
+  </ul>
+  <ul id="leg-form">
+      <li><%= f.label :squats %></li>
+      <li><%= f.text_field :squats %></li>
+      <li><%= f.label :legpress %></li>
+      <li><%= f.text_field :legpress %></li>
+      <li><%= f.label :quads %></li>
+      <li><%= f.text_field :quads %></li>
+      <li><%= f.label :hamstring %></li>
+      <li><%= f.text_field :hamstring %></li>
+      <li><%= f.label :calf %></li>
+      <li><%= f.text_field :calf %></li>
+  </ul>
   <div class="actions">
     <%= f.submit %>
   </div>

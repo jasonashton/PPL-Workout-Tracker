@@ -70,6 +70,8 @@ class GainsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def gain_params
       params[:gain].permit(:name, :day, :bench, :overhead, :incline, :lateral,
-                           :pushdown, :tricep, :shrugs)
+                           :pushdown, :tricep, :shrugs, :row, :pulldown,
+                           :seatedrows, :facepull, :curls, :hammercurls,
+                           :squats, :legpress, :quads, :hamstring, :calf)
     end
 end
