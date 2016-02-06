@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160206014231) do
+ActiveRecord::Schema.define(version: 20160206030236) do
 
   create_table "gains", force: :cascade do |t|
     t.string   "name"
@@ -23,8 +23,19 @@ ActiveRecord::Schema.define(version: 20160206014231) do
     t.integer  "pushdown"
     t.integer  "tricep"
     t.integer  "shrugs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "row"
+    t.integer  "pulldown"
+    t.integer  "seatedrows"
+    t.integer  "facepull"
+    t.integer  "curls"
+    t.integer  "hammercurls"
+    t.integer  "squats"
+    t.integer  "legpress"
+    t.integer  "quads"
+    t.integer  "hamstring"
+    t.integer  "calf"
   end
 
 end

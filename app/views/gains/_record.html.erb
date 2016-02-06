@@ -37,14 +37,14 @@
 <table>
   <thead>
     <tr>
-      <th>Day</th>
-      <th>Bench</th>
-      <th>Overhead</th>
-      <th>Incline</th>
-      <th>Lateral</th>
-      <th>Pushdown</th>
-      <th>Tricep</th>
-      <th>Shrugs </th>
+      <th>Pull</th>
+      <th>Rows</th>
+      <th>Lat Pulldown</th>
+      <th>More Rows</th>
+      <th>Face-Pulls</th>
+      <th>Barbell Curls</th>
+      <th>Other Curls</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -52,13 +52,13 @@
     <% @gains.where(name: name, day: "Pull").each do |gain| %>
       <tr>
         <td><%= gain.day %></td>
-        <td><%= gain.bench %></td>
-        <td><%= gain.overhead %></td>
-        <td><%= gain.incline %></td>
-        <td><%= gain.lateral %></td>
-        <td><%= gain.pushdown %></td>
-        <td><%= gain.tricep %></td>
-        <td><%= gain.shrugs %></td>
+        <td><%= gain.row %></td>
+        <td><%= gain.pulldown %></td>
+        <td><%= gain.seatedrows %></td>
+        <td><%= gain.facepull %></td>
+        <td><%= gain.curls %></td>
+        <td><%= gain.hammercurls %></td>
+        <td></td>
         <td><%= link_to 'Show', gain %></td>
         <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
@@ -72,13 +72,13 @@
   <thead>
     <tr>
       <th>Day</th>
-      <th>Bench</th>
-      <th>Overhead</th>
-      <th>Incline</th>
-      <th>Lateral</th>
-      <th>Pushdown</th>
-      <th>Tricep</th>
-      <th>Shrugs </th>
+      <th>OG Squats</th>
+      <th>Leg Press</th>
+      <th>Quads</th>
+      <th>Hammies</th>
+      <th>Baby Calfs</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -86,13 +86,13 @@
     <% @gains.where(name: name, day: "Legs").each do |gain| %>
       <tr>
         <td><%= gain.day %></td>
-        <td><%= gain.bench %></td>
-        <td><%= gain.overhead %></td>
-        <td><%= gain.incline %></td>
-        <td><%= gain.lateral %></td>
-        <td><%= gain.pushdown %></td>
-        <td><%= gain.tricep %></td>
-        <td><%= gain.shrugs %></td>
+        <td><%= gain.squats %></td>
+        <td><%= gain.legpress %></td>
+        <td><%= gain.quads %></td>
+        <td><%= gain.hamstring %></td>
+        <td><%= gain.calf %></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Show', gain %></td>
         <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
