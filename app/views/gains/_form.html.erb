@@ -12,9 +12,9 @@
   <% end %>
   <ul>
     <li><%= f.label :name %></li>
-    <li><%= f.text_field :name %></li>
+    <li><%= f.select :name, ['Jason', 'David', 'Jacob']%></li>
     <li><%= f.label :day %></li>
-    <li><%= f.text_field :day %></li>
+    <li><%= f.select :day, ['Push', 'Pull', 'Legs'] %></li>
     <li><%= f.label :bench %></li>
     <li><%= f.text_field :bench %></li>
     <li><%= f.label :overhead %></li>
