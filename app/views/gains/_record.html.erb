@@ -1,6 +1,6 @@
 <h2><%= name %></h2>
 
-<table>
+<table class="records-table">
   <thead>
     <tr>
       <th>Day</th>
@@ -25,7 +25,7 @@
         <td><%= gain.pushdown %></td>
         <td><%= gain.tricep %></td>
         <td><%= gain.shrugs %></td>
-        <td><%= link_to 'Show', gain %></td>
+        <!-- <td><%= link_to 'Show', gain %></td> -->
         <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
@@ -34,7 +34,7 @@
   </tbody>
 </table>
 
-<table>
+<table class="records-table">
   <thead>
     <tr>
       <th>Pull</th>
@@ -44,7 +44,6 @@
       <th>Face-Pulls</th>
       <th>Barbell Curls</th>
       <th>Other Curls</th>
-      <th></th>
     </tr>
   </thead>
 
@@ -58,8 +57,7 @@
         <td><%= gain.facepull %></td>
         <td><%= gain.curls %></td>
         <td><%= gain.hammercurls %></td>
-        <td></td>
-        <td><%= link_to 'Show', gain %></td>
+        <!-- <td><%= link_to 'Show', gain %></td> -->
         <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
@@ -68,7 +66,7 @@
   </tbody>
 </table>
 
-<table>
+<table class="records-table">
   <thead>
     <tr>
       <th>Day</th>
@@ -77,8 +75,6 @@
       <th>Quads</th>
       <th>Hammies</th>
       <th>Baby Calfs</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -91,9 +87,7 @@
         <td><%= gain.quads %></td>
         <td><%= gain.hamstring %></td>
         <td><%= gain.calf %></td>
-        <td></td>
-        <td></td>
-        <td><%= link_to 'Show', gain %></td>
+        <!-- <td><%= link_to 'Show', gain %></td> -->
         <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
