@@ -1,0 +1,38 @@
+<%= form_for(@gain) do |f| %>
+  <% if @gain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gain.errors.count, "error") %> prohibited this gain from being saved:</h2>
+
+      <ul>
+      <% @gain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <ul>
+    <li><%= f.label :name %></li>
+    <li><%= f.text_field :name %></li>
+    <li><%= f.label :day %></li>
+    <li><%= f.text_field :day %></li>
+    <li><%= f.label :bench %></li>
+    <li><%= f.text_field :bench %></li>
+    <li><%= f.label :overhead %></li>
+    <li><%= f.text_field :overhead %></li>
+    <li><%= f.label :incline %></li>
+    <li><%= f.text_field :incline %></li>
+    <li><%= f.label :lateral %></li>
+    <li><%= f.text_field :lateral %></li>
+    <li><%= f.label :pushdown %></li>
+    <li><%= f.text_field :pushdown %></li>
+    <li><%= f.label :tricep %></li>
+    <li><%= f.text_field :tricep %></li>
+    <li><%= f.label :shrugs %></li>
+    <li><%= f.text_field :shrugs %></li>
+  </ul>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
