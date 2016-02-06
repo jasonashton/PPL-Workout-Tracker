@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready(function(){
+
+var hideElements = function(){
   $("#push-form").css("display", "block");
   $("#pull-form").css("display", "none");
   $("#leg-form").css("display", "none");
@@ -35,4 +36,7 @@ $(document).ready(function(){
       $("#leg-form").css("display", "block");
     }
   });
-});
+};
+
+$(document).ready(hideElements);
+$(document).on('page:load', hideElements);
