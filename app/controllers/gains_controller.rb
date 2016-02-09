@@ -28,7 +28,7 @@ class GainsController < ApplicationController
 
     respond_to do |format|
       if @gain.save
-        format.html { redirect_to @gain, notice: 'Gain was successfully created.' }
+        format.html { redirect_to gains_url, notice: 'Gain was successfully created.' }
         format.json { render :show, status: :created, location: @gain }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GainsController < ApplicationController
   def update
     respond_to do |format|
       if @gain.update(gain_params)
-        format.html { redirect_to @gain, notice: 'Gain was successfully updated.' }
+        format.html { redirect_to gains_url, notice: 'Gain was successfully updated.' }
         format.json { render :show, status: :ok, location: @gain }
       else
         format.html { render :edit }
