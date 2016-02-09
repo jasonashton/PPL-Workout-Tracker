@@ -10,9 +10,9 @@
       </ul>
     </div>
   <% end %>
+  <h2>Editing for: <%= params[:name] %></h2>
+  <%= f.hidden_field :name, :value=>params[:name] %>
   <ul>
-    <li><%= f.label :name %></li>
-    <li><%= f.select :name, ['Jason', 'David', 'Jacob']%></li>
     <li><%= f.label :day %></li>
     <li id="day-selector"><%= f.select :day, ['Push', 'Pull', 'Legs'] %></li>
   </ul>

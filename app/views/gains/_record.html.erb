@@ -28,7 +28,7 @@
         <td><%= gain.tricep %></td>
         <td><%= gain.shrugs %></td>
         <!-- <td><%= link_to 'Show', gain %></td> -->
-        <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
+        <td><%= link_to 'Edit', edit_gain_path(gain, name: name) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -62,7 +62,7 @@
         <td><%= gain.curls %></td>
         <td><%= gain.hammercurls %></td>
         <!-- <td><%= link_to 'Show', gain %></td> -->
-        <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
+        <td><%= link_to 'Edit', edit_gain_path(gain, name: name) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -94,11 +94,11 @@
         <td><%= gain.hamstring %></td>
         <td><%= gain.calf %></td>
         <!-- <td><%= link_to 'Show', gain %></td> -->
-        <td><%= link_to 'Edit', edit_gain_path(gain) %></td>
+        <td><%= link_to 'Edit', edit_gain_path(gain, name: name) %></td>
         <td><%= link_to 'Destroy', gain, method: :delete,
                                   data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-  <%= link_to 'New Gain', new_gain_path %>
+  <%= link_to 'New Gain', new_gain_path(name: name)%>
