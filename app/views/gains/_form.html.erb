@@ -12,26 +12,31 @@
   <% end %>
   <h2>Editing for: <%= params[:name] %></h2>
   <%= f.hidden_field :name, :value=>params[:name] %>
-  <ul>
-    <li><%= f.label :day %></li>
-    <li id="day-selector"><%= f.select :day, ['Push', 'Pull', 'Legs'] %></li>
-  </ul>
-  <ul id="push-form">
-    <li><%= f.label :bench %></li>
-    <li><%= f.text_field :bench %></li>
-    <li><%= f.label :overhead %></li>
-    <li><%= f.text_field :overhead %></li>
-    <li><%= f.label :incline %></li>
-    <li><%= f.text_field :incline %></li>
-    <li><%= f.label :lateral %></li>
-    <li><%= f.text_field :lateral %></li>
-    <li><%= f.label :pushdown %></li>
-    <li><%= f.text_field :pushdown %></li>
-    <li><%= f.label :tricep %></li>
-    <li><%= f.text_field :tricep %></li>
-    <li><%= f.label :shrugs %></li>
-    <li><%= f.text_field :shrugs %></li>
-  </ul>
+  <% if @gain.day.nil? %>
+    <ul>
+      <li><%= f.label :day %></li>
+      <li id="day-selector"><%= f.select :day, ['Push', 'Pull', 'Legs'] %></li>
+    </ul>
+  <% end %>
+  <% if @gain.day == "Push" || @gain.day.nil? %>
+    <ul id="push-form">
+      <li><%= f.label :bench %></li>
+      <li><%= f.text_field :bench %></li>
+      <li><%= f.label :overhead %></li>
+      <li><%= f.text_field :overhead %></li>
+      <li><%= f.label :incline %></li>
+      <li><%= f.text_field :incline %></li>
+      <li><%= f.label :lateral %></li>
+      <li><%= f.text_field :lateral %></li>
+      <li><%= f.label :pushdown %></li>
+      <li><%= f.text_field :pushdown %></li>
+      <li><%= f.label :tricep %></li>
+      <li><%= f.text_field :tricep %></li>
+      <li><%= f.label :shrugs %></li>
+      <li><%= f.text_field :shrugs %></li>
+    </ul>
+  <% end %>
+  <% if @gain.day == "Pull" || @gain.day.nil? %>
   <ul id="pull-form">
     <li><%= f.label :row %></li>
     <li><%= f.text_field :row %></li>
@@ -46,6 +51,8 @@
     <li><%= f.label :hammercurls %></li>
     <li><%= f.text_field :hammercurls %></li>
   </ul>
+  <% end %>
+  <% if @gain.day == "Legs" || @gain.day.nil? %>
   <ul id="leg-form">
       <li><%= f.label :squats %></li>
       <li><%= f.text_field :squats %></li>
@@ -58,6 +65,7 @@
       <li><%= f.label :calf %></li>
       <li><%= f.text_field :calf %></li>
   </ul>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

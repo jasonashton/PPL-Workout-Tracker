@@ -3,3 +3,31 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', gains_path %>
+
+<script>
+var hideElements = function(){
+  $("#push-form").css("display", "block");
+  $("#pull-form").css("display", "none");
+  $("#leg-form").css("display", "none");
+
+  $('#gain_day').click(function(){
+    var state = $('#gain_day').val();
+    if(state == "Push"){
+      $("#push-form").css("display", "block");
+      $("#pull-form").css("display", "none");
+      $("#leg-form").css("display", "none");
+    }else if(state == "Pull"){
+      $("#push-form").css("display", "none");
+      $("#pull-form").css("display", "block");
+      $("#leg-form").css("display", "none");
+    }else if(state == "Legs"){
+      $("#push-form").css("display", "none");
+      $("#pull-form").css("display", "none");
+      $("#leg-form").css("display", "block");
+    }
+  });
+};
+
+$(document).ready(hideElements);
+$(document).on('page:load', hideElements);
+</script>
