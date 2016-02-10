@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
+
+.btn, .btn:link, .btn:visited, .btn:hover, .btn:active{
+  color:white;
+}
+
+a:hover{
+  color:blue;
+}

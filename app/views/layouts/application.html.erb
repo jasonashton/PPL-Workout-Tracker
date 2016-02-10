@@ -7,21 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div style="float:left;">
-  <h1>Get on Dis'</h1>
-  <small><em>You gotta be big to be big</em> - George Washington</small><br>
-  <small><em>In between sets, it's not a rest for me, it's a rest for the weights</em> - The Brofessor</small><br>
-  <a href="http://forum.bodybuilding.com/showthread.php?t=149807833" target="_blank">Dat sweet sweet iced forum post</a>
+  <div class="container-fluid">
+  <div class="col-sm-4 col-xs-12">
+    <h1>Get on Dis' <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span></h1>
+    <small><em>You gotta be big to be big</em> - George Washington</small><br>
+    <small><em>In between sets, it's not a rest for me, it's a rest for the weights</em> - The Brofessor</small><br>
+    <a href="http://forum.bodybuilding.com/showthread.php?t=149807833" target="_blank">Dat sweet sweet iced forum post</a>
+  </div>
+  <div class="col-sm-8 col-xs-12">
+    <figure>
+      <%=image_tag("arnoldyoung.png", alt: "Young Arnold", style: "width: 200px;", class: "img-responsive") %>
+      <figcaption><small><em>Arnold being bigger than you</em></small></figcaption>
+    </figure>
+  </div>
 </div>
-<div style="float:left;">
-  <figure>
-  <%=image_tag("arnoldyoung.png", alt: "Young Arnold", style: "width: 200px;") %>
-  <figcaption><small><em>Arnold being bigger than you</em></small></figcaption>
-</figure>
-</div>
-<div style="clear:both;">
-</div>
-<%= yield %>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
